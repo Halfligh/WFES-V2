@@ -21,7 +21,6 @@ header {
 .top-block.hidden {
   opacity: 0;
   height: 0;
-  transition: opacity 0.3s ease-out, height 0.3s ease-out;
 }
 
 .nav-container {
@@ -29,7 +28,6 @@ header {
   top: 50px; /* Place la navigation sous le bloc supérieur */
   width: 100%; /* Toujours 100% de la largeur */
   background-color: rgb(255, 255, 255);
-  transition: top 0.3s ease-out, height 0.3s ease-out;
 }
 
 .nav-container.fixed {
@@ -40,7 +38,7 @@ header {
 }
 
 .nav-container.fixed.small {
-  height: 80px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
+  height: 70px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
 }
 
 .nav-container.fixed.small::after {

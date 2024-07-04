@@ -1,0 +1,30 @@
+/* styles/footer.css */
+.footer {
+    width: 100%;
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Assurez-vous que le positionnement est relatif */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8em;
+  }
+  
+  .footer-link {
+    color: #fff; /* Couleur du lien */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #52AE32; /* Couleur du lien au survol */
+  }
+  
