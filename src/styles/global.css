@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .global-name {
@@ -16,20 +15,22 @@
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 200px;
     margin-top: 100px;
-  }
-  
-  .home-container h1 {
+}
+
+.home-container h1 {
     margin-bottom: 30px;
-  }
-  
-  .items-container {
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.items-container {
     display: flex;
     justify-content: space-around;
     width: 80%;
     min-height: 500px;
-  }
-  
-  .item {
+}
+
+.item {
     display: flex;
     flex-direction: column;
     background-color: #EAE9E4;
@@ -40,47 +41,99 @@
     padding-bottom: 20px;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .item-image{
+.item-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
+}
 
-  .item-title {
+.item-title {
     font-size: 1.5em;
     font-weight: 300;
-  }
-  
-  .item:first-child {
+}
+
+.item:first-child {
     margin-left: 0; /* Supprimer la marge gauche du premier item */
-  }
-  
-  .item:last-child {
+}
+
+.item:last-child {
     margin-right: 0; /* Supprimer la marge droite du dernier item */
-  }
-  
-  .image-home {
+}
+
+.image-home {
     height: 250px;
     width: 100%;
     object-fit: cover;
-  }
+}
 
-  .item-button {
+.item-button {
     display: flex;
     cursor: pointer;
     height: 30px;
     border-radius: 6px;
     background-color: #52A332;
     border-color: transparent;
-    color:white;
+    color: white;
     padding: 15px;
     font-size: 1em;
     align-items: center;
-  }
+    margin-bottom: 50px;
+}
 
-  .item-button:hover {
+.item-button:hover {
     background-color: #3C8B27;
     text-decoration: underline;
-  }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAE9E4;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 10px; /* Espacement entre les items */
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: #3C8B27;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+    position: relative;
+    margin-top: 50px;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de zoom */
+}
+
+.card-image:hover {
+    transform: scale(1.1); /* Applique un zoom de 10% au survol */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.card-subtitle {
+    color: black;
+}
+
+.card:hover {
+    color: black;
+    cursor: pointer;
+}

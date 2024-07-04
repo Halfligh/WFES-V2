@@ -36,22 +36,22 @@ function Nav() {
           <img src={logo} alt="Logo" className="nav-logo" />
           <ul className="nav-list">
             <li>
-              <NavLink exact to="/" activeClassName="active">
+              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
                 Accueil
               </NavLink>
             </li>
             <li>
-              <NavLink to="/projects" activeClassName="active">
+              <NavLink to="/projets" className={({ isActive }) => (isActive ? "active" : "")}>
                 Projets
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="active">
+              <NavLink to="/presentation" className={({ isActive }) => (isActive ? "active" : "")}>
                 Présentation
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" activeClassName="active">
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
                 Contact
               </NavLink>
             </li>

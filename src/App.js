@@ -22,7 +22,7 @@ function App() {
         <Nav />
         <div className="content-container">
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/presentation" element={<About />} />
             <Route path="/projets" element={<Projects />} />
             <Route path="/projets-knx" element={<ProjectsKnx />} />

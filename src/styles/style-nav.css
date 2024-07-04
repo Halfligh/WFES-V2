@@ -65,6 +65,10 @@ header {
   padding: 10px; /* Réduit le padding lorsque la navigation est petite */
 }
 
+.nav-content.small .nav-logo {
+  transform: scale(0.8); /* Échelle réduite à 80% */
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -93,9 +97,10 @@ header {
 .nav-list a.active {
   border-bottom: 2px solid #52AE32;
 }
-
 .nav-logo {
   height: 80%; /* Ajustez la hauteur du logo selon vos besoins */
+  transition: transform 0.2s ease;
+  transform-origin: left; /* Définit l'origine de la transformation au coin en haut à gauche */
 }
 
 .content {
