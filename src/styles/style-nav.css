@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+}
+
+.top-block {
+  background-color: #EAE9E4;
+  width: 100%;
+  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+}
+
+.top-block.hidden {
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+}
+
+.nav-container {
+  position: absolute; /* Positionnement absolu par rapport à l'en-tête */
+  top: 50px; /* Place la navigation sous le bloc supérieur */
+  width: 100%; /* Toujours 100% de la largeur */
+  background-color: rgb(255, 255, 255);
+  transition: top 0.3s ease-out, height 0.3s ease-out;
+}
+
+.nav-container.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-container.fixed.small {
+  height: 80px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
+}
+
+.nav-container.fixed.small::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  border-bottom: 0.5px solid lightgray;
+}
+
+.nav-content {
+  width: 80%; /* Largeur de 80% pour centrer le contenu */
+  margin: 0 auto; /* Centre le contenu */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Ajoute un padding pour créer de l'espace à droite et à gauche */
+  height: 100px; /* Hauteur initiale de la navigation */
+}
+
+.nav-content.small {
+  height: 50px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
+  padding: 10px; /* Réduit le padding lorsque la navigation est petite */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0; /* Ajuster le padding pour l'espace autour des items */
+}
+
+.nav-list li {
+  margin: 0; /* Supprimer la marge horizontale pour que les bordures se touchent */
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #999999;
+  padding: 15px; /* Ajouter du padding pour les espaces */
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.62px;
+}
+
+.nav-list a:hover {
+  border-bottom: 2px solid #52AE32;
+}
+
+.nav-list a.active {
+  border-bottom: 2px solid #52AE32;
+}
+
+.nav-logo {
+  height: 80%; /* Ajustez la hauteur du logo selon vos besoins */
+}
+
+.content {
+  padding-top: 100px; /* Ajustez en fonction de la hauteur de votre nav et du bloc supérieur */
+}
