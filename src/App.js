@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import ProjectsKnx from "./pages/Projects/Knx";
+import ProjectsInfo from "./pages/Projects/Informatique";
+import ProjectsPhotovoltaique from "./pages/Projects/Photovoltaique";
 import Contact from "./pages/Contact";
 import Legals from "./pages/Legals"; // Assurez-vous de créer ce composant
 import Nav from "./components/Nav";
@@ -22,6 +25,9 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/presentation" element={<About />} />
             <Route path="/projets" element={<Projects />} />
+            <Route path="/projets-knx" element={<ProjectsKnx />} />
+            <Route path="/projets-reseaux" element={<ProjectsInfo />} />
+            <Route path="/projets-photovoltaique" element={<ProjectsPhotovoltaique />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<Legals />} />
           </Routes>
