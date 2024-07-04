@@ -25,7 +25,7 @@
 
 .items-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 80%;
     min-height: 500px;
 }
@@ -93,7 +93,7 @@
     background-color: #EAE9E4;
     border-radius: 5px;
     text-align: center;
-    margin: 0 10px; /* Espacement entre les items */
+    margin: 0; /* Espacement entre les items */
     padding-bottom: 20px;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +101,14 @@
     overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
     position: relative;
     margin-top: 50px;
+}
+
+.card:nth-child(1){
+    margin-right: 10px;
+}
+
+.card:nth-child(3){
+    margin-left: 10px;
 }
 
 .card-image-container {

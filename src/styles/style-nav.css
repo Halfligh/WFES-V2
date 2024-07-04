@@ -77,6 +77,10 @@ header {
   padding: 0; /* Ajuster le padding pour l'espace autour des items */
 }
 
+.nav-list li:nth-child(4) a {
+  padding-right: 0;
+}
+
 .nav-list li {
   margin: 0; /* Supprimer la marge horizontale pour que les bordures se touchent */
 }
@@ -97,6 +101,7 @@ header {
 .nav-list a.active {
   border-bottom: 2px solid #52AE32;
 }
+
 .nav-logo {
   height: 80%; /* Ajustez la hauteur du logo selon vos besoins */
   transition: transform 0.2s ease;
