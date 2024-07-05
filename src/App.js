@@ -1,6 +1,6 @@
-// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop"; // Assurez-vous que le chemin est correct
 
 // Importez vos composants de page
 import Home from "./pages/Home";
@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="app-container">
       <Router>
+        <ScrollToTop />
         <Nav />
         <div className="content-container">
           <Routes>

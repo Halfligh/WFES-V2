@@ -6,6 +6,21 @@
     padding-bottom: 50px;
 }
 
+.global-title-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.global-title {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 50px;
+}
+
+.global-title-description {
+    text-align: justify; ;
+}
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -103,6 +118,8 @@
     margin-top: 50px;
 }
 
+
+
 .card:nth-child(1){
     margin-right: 10px;
 }
@@ -144,4 +161,69 @@
 .card:hover {
     color: black;
     cursor: pointer;
+}
+
+.project-items-container {
+    display: flex;
+    width: 80%;
+    min-height: 300px;
+    overflow: hidden; /* Masque les cartes qui dépassent du conteneur */
+    position: relative;
+}
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAE9E4;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0; /* Espacement entre les items */
+    justify-content: flex-start;
+    align-items: center;
+    color: #3C8B27;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    opacity: 0;
+    transform: translateX(100%); /* Commence hors de l'écran à droite */
+    animation: slideIn 1s forwards; /* Animation d'entrée */
+}
+
+
+
+.project-card:nth-child(1){
+    margin-right: 20px;
+}
+
+.project-card:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3){
+    margin-left: 20px;
+    animation-delay: 0.4s;
+}
+
+.project-card-image-container {
+    width: calc(100% - 40px);
+    height: 200px;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+}
+
+.project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de zoom */
+    border-radius: 5px;
+}
+
+/* Animation de défilement des cartes */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
