@@ -1,11 +1,9 @@
 import React from "react";
 import "../../styles/global.css";
-import imagePv2 from "../../assets/pv2.jpg";
-import imagePv1 from "../../assets/pv1.jpg";
-import imagePv from "../../assets/2.jpg";
 import { useNavigate } from "react-router-dom";
 import { LoremIpsum } from "lorem-ipsum";
 import ProjectCard from "../../components/ProjectCard";
+import projectsData from "../../data/projectsData";
 
 function Photovoltaique() {
   const navigate = useNavigate();
@@ -23,6 +21,9 @@ function Photovoltaique() {
 
   const ipsum = lorem.generateWords(80);
 
+  // Filtrer les projets de type "photovoltaique"
+  const filteredProjects = projectsData.filter((project) => project.type === "photovoltaique");
+
   return (
     <div className="home-container">
       <div className="global-title-container">
@@ -31,28 +32,16 @@ function Photovoltaique() {
         <h3>Découvrez nos projets d'installations photovoltaïque</h3>
       </div>
       <div className="project-items-container">
-        <ProjectCard
-          imageSrc={imagePv1}
-          imageAlt="projet1"
-          title="Projet 1"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
-        <ProjectCard
-          imageSrc={imagePv2}
-          imageAlt="projet2"
-          title="Projet 2"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
-
-        <ProjectCard
-          imageSrc={imagePv}
-          imageAlt="projet3"
-          title="Projet 3"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
+        {filteredProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            imageSrc={project.images[1]}
+            imageAlt={project.imageAlt}
+            title={project.title}
+            subtitle={project.subtitle}
+            navigateTo={`/projet/${project.id}`}
+          />
+        ))}
       </div>
     </div>
   );

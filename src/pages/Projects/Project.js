@@ -1,14 +1,19 @@
-import React from "react";
+// src/pages/Project.jsx
+
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import "../../styles/global.css";
-import imageIf2 from "../../assets/if2.jpg";
-import imageIf1 from "../../assets/if1.jpg";
-import imageIf from "../../assets/1.jpg";
-import { useNavigate } from "react-router-dom";
 import { LoremIpsum } from "lorem-ipsum";
-import ProjectCard from "../../components/ProjectCard";
+import projetsData from "../../data/projectsData";
 
 function Project() {
-  const navigate = useNavigate();
+  const { projetId } = useParams();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const projet = projetsData.find((proj) => proj.id === parseInt(projetId));
+
+  if (!projet) {
+    return <div>Projet non trouvé</div>;
+  }
 
   const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -23,38 +28,41 @@ function Project() {
 
   const ipsum = lorem.generateWords(80);
 
-  return (
-    <div className="home-container">
-      <div className="global-title-container">
-        <h1 className="global-title">Projet n°</h1>
-        <p className="global-title-description">{ipsum}</p>
-        <h3>Découvrez nos projets réseaux informatiques</h3>
-      </div>
-      <div className="project-items-container">
-        <ProjectCard
-          imageSrc={imageIf1}
-          imageAlt="projet1"
-          title="Projet 1"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
-        <ProjectCard
-          imageSrc={imageIf2}
-          imageAlt="projet2"
-          title="Projet 2"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
+  const { images } = projet;
 
-        <ProjectCard
-          imageSrc={imageIf}
-          imageAlt="projet3"
-          title="Projet 3"
-          subtitle="Infos"
-          navigateTo="/projets-knx"
-        />
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  return (
+    <>
+      <div className="home-container no-margin-bottom">
+        <div className="global-title-container">
+          <h1 className="global-title">{projet.title}</h1>
+        </div>
       </div>
-    </div>
+      <div className="project-container">
+        <div className="project-left-bloc">
+          <h3>Détails du projet</h3>
+          <p className="global-title-description">{projet.description}</p>
+        </div>
+        <div className="project-right-bloc">
+          <div className="carousel-container">
+            <button className="carousel-arrow left" onClick={handlePrevImage}>
+              &lt;
+            </button>
+            <img className="carousel-img" alt={projet.imageAlt} src={images[currentImageIndex]} />
+            <button className="carousel-arrow right" onClick={handleNextImage}>
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

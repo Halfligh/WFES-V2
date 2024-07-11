@@ -5,6 +5,7 @@ import ScrollToTop from "./components/ScrollToTop"; // Assurez-vous que le chemi
 // Importez vos composants de page
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Project from "./pages/Projects/Project";
 import Projects from "./pages/Projects";
 import ProjectsKnx from "./pages/Projects/Knx";
 import ProjectsInfo from "./pages/Projects/Informatique";
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/presentation" element={<About />} />
+            <Route path="/projet/:projetId" element={<Project />} />
             <Route path="/projets" element={<Projects />} />
             <Route path="/projets-knx" element={<ProjectsKnx />} />
             <Route path="/projets-reseaux" element={<ProjectsInfo />} />

@@ -1,12 +1,13 @@
 // components/Nav.js
 import React, { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../styles/style-nav.css"; // Importez le fichier CSS pour les styles
 import logo from "../assets/logo.png"; // Chemin vers votre logo
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const topBlockRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +42,16 @@ function Nav() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/projets" className={({ isActive }) => (isActive ? "active" : "")}>
+              <NavLink
+                to="/projets"
+                className={({ isActive }) =>
+                  isActive ||
+                  location.pathname.startsWith("/projets") ||
+                  location.pathname.startsWith("/projet")
+                    ? "active"
+                    : ""
+                }
+              >
                 Projets
               </NavLink>
             </li>

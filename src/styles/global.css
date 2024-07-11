@@ -189,6 +189,7 @@
     opacity: 0;
     transform: translateX(100%); /* Commence hors de l'écran à droite */
     animation: slideIn 1s forwards; /* Animation d'entrée */
+    cursor: pointer;
 }
 
 
@@ -207,9 +208,12 @@
 }
 
 .project-card-image-container {
-    width: calc(100% - 40px);
-    height: 200px;
+    width: 300px;
+    height: 200px;  
+    padding-left: 20px;
+    padding-right: 20px;
     overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+    position: relative;
 }
 
 .project-card-image {
@@ -227,3 +231,78 @@
         opacity: 1;
     }
 }
+
+.project-container {
+    display: flex;
+    width: 80%;
+    height: 42vw;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 100px;
+  }
+  
+  .project-left-bloc {
+    display: flex;
+    width: 35%;
+    height: 40vw;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .project-left-bloc h3{
+    margin-top: 0;
+  }
+  
+  .project-right-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 40vw;
+    padding: 20px;
+    padding-right: 0;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .carousel-arrow.left {
+    left: 10px;
+  }
+  
+  .carousel-arrow.right {
+    right: 10px;
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0px;
+  }
