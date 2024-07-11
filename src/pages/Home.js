@@ -19,7 +19,7 @@ function Home() {
           <img className="item-image" alt="knx" src={imageKnx} />
           <h3 className="item-title">Bâtiment intelligent KNX</h3>
           <p>Description</p>
-          <button className="item-button" onClick={() => navigate("/projets-knx")} o>
+          <button className="item-button" onClick={() => navigate("/projets-knx")}>
             Voir plus
           </button>
         </div>
@@ -27,13 +27,17 @@ function Home() {
           <img className="item-image" alt="photovoltaïque" src={imagePv} />
           <h3 className="item-title">Photovoltaïque</h3>
           <p>Description</p>
-          <button className="item-button">Voir plus</button>
+          <button className="item-button" onClick={() => navigate("/projets-photovoltaique")}>
+            Voir plus
+          </button>
         </div>
         <div className="item">
           <img className="item-image" alt="informatique" src={imageIf} />
           <h3 className="item-title">Réseaux informatiques</h3>
           <p>Description</p>
-          <button className="item-button">Voir plus</button>
+          <button className="item-button" onClick={() => navigate("/projets-reseaux")}>
+            Voir plus
+          </button>
         </div>
       </div>
     </div>
