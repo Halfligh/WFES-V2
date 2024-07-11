@@ -28,8 +28,8 @@
     justify-content: center;
     margin: 0 auto; /* Centrer horizontalement */
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 200px;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .home-container h1 {
@@ -58,9 +58,15 @@
     align-items: center;
 }
 
-.item-image {
+.item-image-container{
     width: 100%;
     height: 200px;
+    min-height: 200px;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -118,8 +124,6 @@
     margin-top: 50px;
 }
 
-
-
 .card:nth-child(1){
     margin-right: 10px;
 }
@@ -162,6 +166,84 @@
     color: black;
     cursor: pointer;
 }
+
+@media (max-width: 850px) {
+    .items-container{
+        min-height: 320px;
+        height: 320px;
+    }
+
+    .item-title {
+        font-size: 0.8em;
+        font-weight: 300;
+        padding: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .item p{
+        font-size: 0.8em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .item-button{
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
+
+    .card-image-container {
+        min-height: 150px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .items-container{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .item{
+        margin-bottom: 30px;
+    }
+
+    .project-items-container{
+        flex-direction: column;
+    }
+
+    .card-content{
+        width: 100%;
+    }
+
+    .project-card-image-container{
+        width: 100% !important;
+    }
+
+    .project-card{
+        padding-bottom: 0 !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .project-container{
+        flex-direction: column;
+    }
+
+    .project-left-bloc{
+        width: 100% !important;
+    }
+
+    .project-right-bloc{
+        width: 100% !important;
+        height: 50vw !important;
+        padding: 0 !important;
+    }
+}
+
 
 .project-items-container {
     display: flex;
@@ -231,6 +313,28 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 850px) {
+    .project-card-image-container{
+        width: 150px;
+        height: 150px;
+    }
+
+    .card-title{
+        font-size: 1em;
+    }
+
+    .card-subtitle{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card{
+        min-height: 300px;
+    }
+}
+
 
 .project-container {
     display: flex;

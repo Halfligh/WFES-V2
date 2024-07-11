@@ -1,0 +1,116 @@
+/* projects.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centrer horizontalement */
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.items-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    min-height: 500px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAE9E4;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0; /* Espacement entre les items */
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: #3C8B27;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+    position: relative;
+    margin-top: 50px;
+}
+
+.card:nth-child(1){
+    margin-right: 10px;
+}
+
+.card:nth-child(3){
+    margin-left: 10px;
+}
+
+.card-image-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de zoom */
+}
+
+.card-image:hover {
+    transform: scale(1.1); /* Applique un zoom de 10% au survol */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.card-subtitle {
+    color: black;
+}
+
+.card:hover {
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .items-container{
+        min-height: 320px;
+        height: 320px;
+    }
+
+    .card-title {
+        font-size: 0.8em;
+        font-weight: 300;
+        padding: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .card-subtitle {
+        font-size: 0.8em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .card-image-container {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .items-container{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .card{
+        margin-bottom: 30px;
+    }
+}

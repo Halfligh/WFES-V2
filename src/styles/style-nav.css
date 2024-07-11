@@ -1,3 +1,4 @@
+/* Importation des polices et styles globaux */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body, html {
@@ -14,7 +15,7 @@ header {
 .top-block {
   background-color: #EAE9E4;
   width: 100%;
-  height: 50px; /* Ajustez la hauteur selon vos besoins */
+  height: 50px;
   transition: opacity 0.3s ease-out, height 0.3s ease-out;
 }
 
@@ -23,10 +24,14 @@ header {
   height: 0;
 }
 
+.top-block.hide {
+  display: none;
+}
+
 .nav-container {
-  position: absolute; /* Positionnement absolu par rapport à l'en-tête */
-  top: 50px; /* Place la navigation sous le bloc supérieur */
-  width: 100%; /* Toujours 100% de la largeur */
+  position: absolute;
+  top: 50px;
+  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -38,7 +43,7 @@ header {
 }
 
 .nav-container.fixed.small {
-  height: 70px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
+  height: 70px;
 }
 
 .nav-container.fixed.small::after {
@@ -51,22 +56,23 @@ header {
 }
 
 .nav-content {
-  width: 80%; /* Largeur de 80% pour centrer le contenu */
-  margin: 0 auto; /* Centre le contenu */
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px; /* Ajoute un padding pour créer de l'espace à droite et à gauche */
-  height: 100px; /* Hauteur initiale de la navigation */
+  padding: 20px;
+  height: 100px;
+  position: relative;
 }
 
 .nav-content.small {
-  height: 50px; /* Hauteur réduite de la navigation lorsque scrolled est vrai */
-  padding: 10px; /* Réduit le padding lorsque la navigation est petite */
+  height: 50px;
+  padding: 10px;
 }
 
 .nav-content.small .nav-logo {
-  transform: scale(0.8); /* Échelle réduite à 80% */
+  transform: scale(0.8);
 }
 
 .nav-list {
@@ -74,7 +80,7 @@ header {
   display: flex;
   justify-content: flex-end;
   margin: 0;
-  padding: 0; /* Ajuster le padding pour l'espace autour des items */
+  padding: 0;
 }
 
 .nav-list li:nth-child(4) a {
@@ -82,13 +88,13 @@ header {
 }
 
 .nav-list li {
-  margin: 0; /* Supprimer la marge horizontale pour que les bordures se touchent */
+  margin: 0;
 }
 
 .nav-list a {
   text-decoration: none;
   color: #999999;
-  padding: 15px; /* Ajouter du padding pour les espaces */
+  padding: 15px;
   text-transform: uppercase;
   font-size: 0.8em;
   letter-spacing: 0.62px;
@@ -103,11 +109,77 @@ header {
 }
 
 .nav-logo {
-  height: 80%; /* Ajustez la hauteur du logo selon vos besoins */
+  height: 80%;
   transition: transform 0.2s ease;
-  transform-origin: left; /* Définit l'origine de la transformation au coin en haut à gauche */
+  transform-origin: center; /* Centre le logo */
 }
 
-.content {
-  padding-top: 100px; /* Ajustez en fonction de la hauteur de votre nav et du bloc supérieur */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+/* Styles spécifiques pour les écrans de moins de 650px */
+@media (max-width: 650px) {
+  .top-block {
+    display: none;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-content.small {
+    width: 90%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .nav-list li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-list a {
+    padding: 15px 20px;
+    width: 100%;
+    display: block;
+  }
+
+  .nav-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-list a.active {
+    border-bottom: 2px solid #52AE32;
+    width: 90%;
+  }
+
+  
 }

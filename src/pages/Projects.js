@@ -1,8 +1,7 @@
 import React from "react";
 
 import Card from "../components/Card";
-import "../styles/global.css";
-
+import "../styles/projects.css";
 import imageKnx from "../assets/2.jpg";
 import imagePv from "../assets/3.jpg";
 import imageIf from "../assets/1.jpg";

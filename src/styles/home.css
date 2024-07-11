@@ -1,0 +1,127 @@
+/* home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Centrer horizontalement */
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.home-container h1 {
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.items-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    min-height: 500px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAE9E4;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px; /* Espacement entre les items */
+    padding-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-image-container{
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-title {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.item:first-child {
+    margin-left: 0; /* Supprimer la marge gauche du premier item */
+}
+
+.item:last-child {
+    margin-right: 0; /* Supprimer la marge droite du dernier item */
+}
+
+.image-home {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.item-button {
+    display: flex;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #52A332;
+    border-color: transparent;
+    color: white;
+    padding: 15px;
+    font-size: 1em;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.item-button:hover {
+    background-color: #3C8B27;
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .items-container{
+        min-height: 320px;
+        height: 320px;
+    }
+
+    .item-title {
+        font-size: 0.8em;
+        font-weight: 300;
+        padding: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .item p{
+        font-size: 0.8em;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .item-button{
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .items-container{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .item{
+        margin-bottom: 30px;
+    }
+}

@@ -1,11 +1,11 @@
-// components/Nav.js
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import "../styles/style-nav.css"; // Importez le fichier CSS pour les styles
-import logo from "../assets/logo.png"; // Chemin vers votre logo
+import "../styles/style-nav.css";
+import logo from "../assets/logo.png";
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const topBlockRef = useRef(null);
   const location = useLocation();
 
@@ -29,15 +29,33 @@ function Nav() {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header>
-      <div ref={topBlockRef} className={`top-block ${scrolled ? "hidden" : ""}`}></div>
+      <div
+        ref={topBlockRef}
+        className={`top-block ${scrolled ? "hidden" : ""} ${menuOpen ? "hide" : ""}`}
+      ></div>
       <nav className={`nav-container ${scrolled ? "fixed small" : ""}`}>
         <div className={`nav-content ${scrolled ? "small" : ""}`}>
+          <button className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+            &#9776;
+          </button>
           <img src={logo} alt="Logo" className="nav-logo" />
-          <ul className="nav-list">
+          <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
             <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
                 Accueil
               </NavLink>
             </li>
@@ -51,17 +69,26 @@ function Nav() {
                     ? "active"
                     : ""
                 }
+                onClick={closeMenu}
               >
                 Projets
               </NavLink>
             </li>
             <li>
-              <NavLink to="/presentation" className={({ isActive }) => (isActive ? "active" : "")}>
+              <NavLink
+                to="/presentation"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
                 Présentation
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={closeMenu}
+              >
                 Contact
               </NavLink>
             </li>

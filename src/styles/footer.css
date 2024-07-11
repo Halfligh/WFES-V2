@@ -6,6 +6,7 @@
     text-align: center;
     padding: 10px 0;
     position: relative; /* Assurez-vous que le positionnement est relatif */
+    margin-top: 50px;
   }
   
   .footer-content {
@@ -28,3 +29,9 @@
     color: #52AE32; /* Couleur du lien au survol */
   }
   
+
+  @media (max-width: 500px) {
+    .footer{
+      display: none;
+    }
+  }
