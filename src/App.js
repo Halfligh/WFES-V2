@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop"; // Assurez-vous que le chemin est correct
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import "./styles/app.css";
 
 // Importez vos composants de page
@@ -24,7 +24,8 @@ function App() {
         <Nav />
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/WFES-V2" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/presentation" element={<About />} />
             <Route path="/projet/:projetId" element={<Project />} />
             <Route path="/projets" element={<Projects />} />
