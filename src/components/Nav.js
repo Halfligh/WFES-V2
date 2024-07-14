@@ -52,7 +52,7 @@ function Nav() {
           <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
             <li>
               <NavLink
-                to="/home"
+                to="/WFES-V2"
                 className={({ isActive }) => (isActive ? "active" : "")}
                 onClick={closeMenu}
               >
