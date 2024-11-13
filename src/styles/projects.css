@@ -28,7 +28,7 @@
     padding-bottom: 20px;
     justify-content: space-between;
     align-items: center;
-    color: #3C8B27;
+    color: #040D47;
     overflow: hidden; /* Masque tout contenu qui dépasse du conteneur */
     position: relative;
     margin-top: 50px;
@@ -69,11 +69,12 @@
 }
 
 .card-subtitle {
-    color: black;
+    color: #040D47;
 }
 
 .card:hover {
-    color: black;
+    color: #F4AF1B;
+    font-weight: 800;
     cursor: pointer;
 }
 

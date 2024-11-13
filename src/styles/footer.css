@@ -1,11 +1,11 @@
 /* styles/footer.css */
 .footer {
     width: 100%;
-    background-color: #333; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
+    background-color: #EAE9E4;
+    color: #040D47;
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Assurez-vous que le positionnement est relatif */
+    position: relative;
     margin-top: 50px;
   }
   
@@ -20,13 +20,13 @@
   }
   
   .footer-link {
-    color: #fff; /* Couleur du lien */
+    color: #040D47;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .footer-link:hover {
-    color: #52AE32; /* Couleur du lien au survol */
+    color: #F4AF1B;
   }
   
 

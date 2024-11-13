@@ -50,7 +50,7 @@ function Nav() {
           </button>
           <img src={logo} alt="Logo" className="nav-logo" />
           <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
-            <li>
+            {/* <li>
               <NavLink
                 to="/WFES-V2"
                 className={({ isActive }) => (isActive ? "active" : "")}
@@ -82,7 +82,7 @@ function Nav() {
               >
                 Présentation
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 to="/contact"

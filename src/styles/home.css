@@ -49,11 +49,6 @@
     object-fit: cover;
 }
 
-.item-title {
-    font-size: 1.5em;
-    font-weight: 300;
-}
-
 .item:first-child {
     margin-left: 0; /* Supprimer la marge gauche du premier item */
 }
@@ -68,24 +63,6 @@
     object-fit: cover;
 }
 
-.item-button {
-    display: flex;
-    cursor: pointer;
-    height: 30px;
-    border-radius: 6px;
-    background-color: #52A332;
-    border-color: transparent;
-    color: white;
-    padding: 15px;
-    font-size: 1em;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.item-button:hover {
-    background-color: #3C8B27;
-    text-decoration: underline;
-}
 
 @media (max-width: 850px) {
     .items-container{

@@ -20,7 +20,7 @@ function Home() {
             <img className="item-image" alt="knx" src={imageKnx} />
           </div>
           <h3 className="item-title">Bâtiment intelligent KNX</h3>
-          <p>Description</p>
+          <p class="item-description">Description</p>
           <button className="item-button" onClick={() => navigate("/projets-knx")}>
             Voir plus
           </button>
@@ -30,7 +30,7 @@ function Home() {
             <img className="item-image" alt="photovoltaïque" src={imagePv} />
           </div>
           <h3 className="item-title">Photovoltaïque</h3>
-          <p>Description</p>
+          <p class="item-description">Description</p>
           <button className="item-button" onClick={() => navigate("/projets-photovoltaique")}>
             Voir plus
           </button>
@@ -40,7 +40,7 @@ function Home() {
             <img className="item-image" alt="informatique" src={imageIf} />
           </div>
           <h3 className="item-title">Réseaux informatiques</h3>
-          <p>Description</p>
+          <p class="item-description">Description</p>
           <button className="item-button" onClick={() => navigate("/projets-reseaux")}>
             Voir plus
           </button>

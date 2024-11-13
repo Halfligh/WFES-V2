@@ -93,7 +93,7 @@ header {
 
 .nav-list a {
   text-decoration: none;
-  color: #999999;
+  color: #040D47;
   padding: 15px;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -101,11 +101,11 @@ header {
 }
 
 .nav-list a:hover {
-  border-bottom: 2px solid #52AE32;
+  border-bottom: 1px solid #F4AF1B;
 }
 
 .nav-list a.active {
-  border-bottom: 2px solid #52AE32;
+  border-bottom: 1px solid #F4AF1B;
 }
 
 .nav-logo {
@@ -152,8 +152,9 @@ header {
     position: absolute;
     top: 60px;
     right: 0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     z-index: 999;
+    border-radius: 8px;
   }
 
   .nav-list.open {
@@ -177,7 +178,7 @@ header {
   }
 
   .nav-list a.active {
-    border-bottom: 2px solid #52AE32;
+    border-bottom: 2px solid #F4AF1B;
     width: 90%;
   }
 

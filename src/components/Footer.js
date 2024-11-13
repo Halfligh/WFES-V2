@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <span>© WFES 2024 - Tous droits réservés</span>
+        <span>© WF Electric Solutions 2024 - Tous droits réservés</span>
         <Link to="/mentions-legales" className="footer-link">
           Mentions légales
         </Link>

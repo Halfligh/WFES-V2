@@ -24,16 +24,18 @@ function App() {
         <Nav />
         <div className="content-container">
           <Routes>
-            <Route path="/WFES-V2" element={<Navigate to="/home" replace />} />
+            {/* <Route path="/WFES-V2" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<Home />} />
             <Route path="/presentation" element={<About />} />
             <Route path="/projet/:projetId" element={<Project />} />
             <Route path="/projets" element={<Projects />} />
             <Route path="/projets-knx" element={<ProjectsKnx />} />
             <Route path="/projets-reseaux" element={<ProjectsInfo />} />
-            <Route path="/projets-photovoltaique" element={<ProjectsPhotovoltaique />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/projets-photovoltaique" element={<ProjectsPhotovoltaique />} /> */}
+            <Route path="/" element={<Contact />} />
             <Route path="/mentions-legales" element={<Legals />} />
+
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
         <Footer />
