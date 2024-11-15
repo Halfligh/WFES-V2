@@ -144,8 +144,8 @@ header {
 }
 
 .solutions{
-  width: 80%;
-  margin-top: -30%;
+  width: 77%;
+  margin-top: -35%;
 }
 
 .path {
@@ -359,5 +359,9 @@ header {
     width: 90%;
   }
 
+  .solutions{
+    width: 70%;
+    margin-top: -39%;
+  }
   
 }
