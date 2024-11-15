@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { ReactComponent as AnimatedLogo } from "../assets/logo.svg";
+import { ReactComponent as AnimatedLogoSolutions } from "../assets/svg/solutions.svg";
 import "../styles/style-nav.css";
-import logo from "../assets/logo.png";
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -9,6 +10,7 @@ function Nav() {
   const topBlockRef = useRef(null);
   const location = useLocation();
 
+  //observeur et fonction pour effet style knx avec la top barre et la taille du logo
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -29,6 +31,7 @@ function Nav() {
     };
   }, []);
 
+  //fonction du menu hamburger
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -42,13 +45,17 @@ function Nav() {
       <div
         ref={topBlockRef}
         className={`top-block ${scrolled ? "hidden" : ""} ${menuOpen ? "hide" : ""}`}
-      ></div>
+      />
       <nav className={`nav-container ${scrolled ? "fixed small" : ""}`}>
         <div className={`nav-content ${scrolled ? "small" : ""}`}>
           <button className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
             &#9776;
           </button>
-          <img src={logo} alt="Logo" className="nav-logo" />
+          <div className="logo-container">
+            <AnimatedLogo className="nav-logo" />
+            <AnimatedLogoSolutions className="solutions" />
+          </div>
+
           <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
             {/* <li>
               <NavLink
